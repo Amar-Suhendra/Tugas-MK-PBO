@@ -126,6 +126,7 @@ public class risu {
         System.out.println("Game over! you lose");
       }
       
+      kondisi = true;
       while (kondisi2) {
         // asking for input
         System.out.print("Do you still want to play? (type y to yes or type q to quit) : ");
