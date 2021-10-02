@@ -67,7 +67,7 @@ public class risu {
       System.out.println("=====================================================");
 
       // check where the squirrel is 
-      if (acak > 1 && acak < 51) {
+      if (acak > 1 && acak < 50) {
         // If the squirrel's position is between 1-50, the maximum squirrel can jump 20 times.
         ulang = 20;
       } else if (acak > 51 && acak < 99) {
