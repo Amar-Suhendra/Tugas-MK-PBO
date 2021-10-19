@@ -3,7 +3,7 @@
  * Using to print the Map for the game 
  *
  * @author Amar Suhendra
- * @version 12.10.21.Alpha-01
+ * @version 15.10.21.Alpha-02
  */
 public class Map
 {

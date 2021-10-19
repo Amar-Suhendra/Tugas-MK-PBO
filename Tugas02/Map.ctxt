@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Map
-comment0.text=\r\n\ Using\ to\ print\ the\ Map\ for\ the\ game\ \r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 12.10.21.Alpha-01\r\n
+comment0.text=\r\n\ Using\ to\ print\ the\ Map\ for\ the\ game\ \r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.10.21.Alpha-02\r\n
 comment1.params=
 comment1.target=Map()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Map\r\n
