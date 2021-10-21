@@ -3,9 +3,9 @@
  * Using to print the Map for the game 
  *
  * @author Amar Suhendra
- * @version 15.10.21.Alpha-02
+ * @version 21.10.21.Alpha-03
  */
-public class Map
+public class KotakAngka
 {
     // instance variables - replace the example below with your own
     private int[][] map;
@@ -14,7 +14,7 @@ public class Map
     /**
      * Constructor for objects of class Map
      */
-    public Map()
+    public KotakAngka()
     {
         // initialise instance variables
         map = new int[10][10];

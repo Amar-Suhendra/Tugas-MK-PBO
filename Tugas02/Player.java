@@ -1,22 +1,24 @@
-
 /**
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 15.10.21.Alpha-02
+ * @version 21.10.21.Alpha-03
  */
 public class Player
 {
     // instance variables - replace the example below with your own
     private String nama;
-
+    private int nilai;
     /**
      * Constructor for objects of class Player
      */
-    public Player()
+    public Player() {
+        
+    }
+    public Player(String nama)
     {
         // initialise instance variables
-        nama = "Player";
+        this.nama = nama;
     }
 
     /**
@@ -35,5 +37,25 @@ public class Player
     {
         // put your code here
         this.nama = nama;
+    }
+    
+    public int getNilai(){
+        return nilai;
+    }
+
+    public int setNilai(int nilaibaru){
+        nilai = nilaibaru;
+
+        return nilai;
+    }
+
+    public void buatSquirrel(){
+
+    }
+
+    public String lompat(){
+        String jarak = "lompat";
+
+        return jarak;
     }
 }

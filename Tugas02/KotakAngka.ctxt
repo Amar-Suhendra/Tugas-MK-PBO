@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=Map
+comment0.target=KotakAngka
 comment0.text=\r\n\ Using\ to\ print\ the\ Map\ for\ the\ game\ \r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.10.21.Alpha-02\r\n
 comment1.params=
-comment1.target=Map()
+comment1.target=KotakAngka()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Map\r\n
 comment2.params=
 comment2.target=void\ InsertMap()

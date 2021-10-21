@@ -2,7 +2,7 @@
  * Write a description of class main here.
  *
  * @author Amar Suhendra
- * @version 15.10.21.Alpha-02
+ * @version 21.10.21.Alpha-03
  */
 
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class MainSquirrelJump
         nama = user;
         while(play){
             
-            Map map1 = new Map();
+            KotakAngka map1 = new KotakAngka();
             Player player1 = new Player();
             map1.InsertMap();
             map1.PrintMap();
