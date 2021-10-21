@@ -1,10 +1,7 @@
 #BlueJ package file
 dependency1.from=MainSquirrelJump
-dependency1.to=KotakAngka
+dependency1.to=Player
 dependency1.type=UsesDependency
-dependency2.from=MainSquirrelJump
-dependency2.to=Player
-dependency2.type=UsesDependency
 editor.fx.0.height=1047
 editor.fx.0.width=974
 editor.fx.0.x=953
@@ -19,7 +16,7 @@ package.editor.x=0
 package.editor.y=0
 package.frame.height=1056
 package.frame.width=976
-package.numDependencies=2
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
