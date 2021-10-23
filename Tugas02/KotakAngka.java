@@ -2,7 +2,7 @@
  * Using to print the Map for the game 
  *
  * @author Amar Suhendra
- * @version 23.10.21.Alpha-05
+ * @version 24.10.21.Alpha-06
  */
 public class KotakAngka
 {
@@ -51,4 +51,9 @@ public class KotakAngka
        System.out.println("=====================================================");
     }
     
+    public int tambahSquirrel(){
+      int posisi, min = 1, max = 99;
+      posisi = (int) (min + Math.random() * (max - min)); 
+      return posisi;
+    }
 }

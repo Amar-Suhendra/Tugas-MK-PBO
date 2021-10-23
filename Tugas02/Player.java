@@ -2,9 +2,8 @@
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 23.10.21.Alpha-05
+ * @version 24.10.21.Alpha-06
  */
-import java.util.Scanner;
 public class Player {
   // instance variables - replace the example below with your own
   private String nama;
@@ -49,8 +48,8 @@ public class Player {
     return nilai;
   }
 
-  public void buatSquirrel(String bajing) {
-    System.out.println("Tupai : " + bajing);
+  public String buatSquirrel(String bajing) {
+    return bajing;
   }
 
   public String lompat() {
