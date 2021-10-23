@@ -3,7 +3,7 @@
  * Write a description of class main here.
  *
  * @author Amar Suhendra
- * @version 21.10.21.Alpha-03
+ * @version 23.10.21.Alpha-04
  */
 
 import java.util.Scanner;
@@ -25,11 +25,11 @@ public class MainSquirrelJump {
 
       KotakAngka map1 = new KotakAngka();
       Player player1 = new Player();
+      player1.buatSquirrel();
       map1.InsertMap();
       map1.PrintMap();
       player1.SetNama(nama);
       System.out.println("Player : " + player1.getNama());
-
       play = false;
     }
   }
@@ -51,7 +51,7 @@ public class MainSquirrelJump {
     Scanner input = new Scanner(System.in);
     Scanner user = new Scanner(System.in);
 
-    while (chooise) {
+    //while (chooise) {
       mainMenu();
       pilih = input.nextInt();
 
@@ -68,9 +68,9 @@ public class MainSquirrelJump {
         System.out.println("Inputan mu tidak valid");
       }
 
-    }
+    //}
 
-    input.close();
-    user.close();
+    //input.close();
+    //user.close();
   }
 }

@@ -1,9 +1,8 @@
-
 /**
  * Using to print the Map for the game 
  *
  * @author Amar Suhendra
- * @version 21.10.21.Alpha-03
+ * @version 23.10.21.Alpha-04
  */
 public class KotakAngka
 {
