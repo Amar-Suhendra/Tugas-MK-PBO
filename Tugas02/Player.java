@@ -2,13 +2,14 @@
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 23.10.21.Alpha-04
+ * @version 23.10.21.Alpha-05
  */
 import java.util.Scanner;
 public class Player {
   // instance variables - replace the example below with your own
   private String nama;
   private int nilai;
+
 
   /**
    * Constructor for objects of class Player
@@ -48,13 +49,8 @@ public class Player {
     return nilai;
   }
 
-  public void buatSquirrel() {
-    String squirrel;
-    Scanner tupai = new Scanner(System.in);
-
-    System.out.print("masukkan nama Squirrel mu : ");
-    squirrel = tupai.nextLine();
-    System.out.println("tupaimu bernama " + squirrel);
+  public void buatSquirrel(String bajing) {
+    System.out.println("Tupai : " + bajing);
   }
 
   public String lompat() {

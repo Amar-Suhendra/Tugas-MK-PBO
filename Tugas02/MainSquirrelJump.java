@@ -3,7 +3,7 @@
  * Write a description of class main here.
  *
  * @author Amar Suhendra
- * @version 23.10.21.Alpha-04
+ * @version 23.10.21.Alpha-05
  */
 
 import java.util.Scanner;
@@ -16,19 +16,21 @@ public class MainSquirrelJump {
    * @return the sum of x and y
    */
 
-  public static void Mainkan(boolean x, String user) {
+  public static void Mainkan(boolean x, String user, String squirrel) {
     boolean play;
     String nama;
+    String tupai;
     play = x;
     nama = user;
+    tupai = squirrel;
     while (play) {
 
       KotakAngka map1 = new KotakAngka();
       Player player1 = new Player();
-      player1.buatSquirrel();
+      player1.SetNama(nama);
       map1.InsertMap();
       map1.PrintMap();
-      player1.SetNama(nama);
+      player1.buatSquirrel(tupai);
       System.out.println("Player : " + player1.getNama());
       play = false;
     }
@@ -46,7 +48,7 @@ public class MainSquirrelJump {
   public static void main(String[] args) {
 
     boolean main = true, chooise = true;
-    String nama;
+    String nama, namaTupai;
     int pilih;
     Scanner input = new Scanner(System.in);
     Scanner user = new Scanner(System.in);
@@ -58,8 +60,9 @@ public class MainSquirrelJump {
       if (pilih == 1) {
         System.out.print("Masukkan namamu : ");
         nama = user.nextLine();
-        System.out.println();
-        Mainkan(main, nama);
+        System.out.print("Masukkan nama Tupaimu  : ");
+        namaTupai = user.nextLine();
+        Mainkan(main, nama, namaTupai);
       } else if (pilih == 2) {
         System.out.println("tutorial");
       } else if (pilih == 3) {
