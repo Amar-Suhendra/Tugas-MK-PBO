@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=MainSquirrelJump
-comment1.params=x\ user
-comment1.target=void\ Mainkan(boolean,\ java.lang.String)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-comment2.params=args
-comment2.target=void\ main(java.lang.String[])
-numComments=3
+comment1.params=x\ user\ squirrel
+comment1.target=void\ Mainkan(boolean,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ y\ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ the\ sum\ of\ x\ and\ y\r\n
+comment2.params=
+comment2.target=void\ mainMenu()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

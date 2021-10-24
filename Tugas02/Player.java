@@ -2,7 +2,7 @@
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-06
+ * @version 24.10.21.Alpha-07
  */
 public class Player {
   // instance variables - replace the example below with your own
@@ -52,8 +52,8 @@ public class Player {
     return bajing;
   }
 
-  public String lompat() {
-    String jarak = "lompat";
+  public int lompat(String jump) {
+    int jarak = 10;
 
     return jarak;
   }

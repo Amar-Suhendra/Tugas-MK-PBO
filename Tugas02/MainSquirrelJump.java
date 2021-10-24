@@ -3,7 +3,7 @@
  * Write a description of class main here.
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-06
+ * @version 24.10.21.Alpha-07
  */
 
 import java.util.Scanner;
@@ -17,9 +17,9 @@ public class MainSquirrelJump {
    */
 
   public static void Mainkan(boolean x, String user, String squirrel) {
+    Scanner action = new Scanner(System.in);
     boolean play;
-    String nama;
-    String tupai;
+    String nama, tupai, lompat;
     int posisi,ulang = 1;
     play = x;
     nama = user;
@@ -54,8 +54,9 @@ public class MainSquirrelJump {
       //   System.out.println("Squirrel is at number : " + posisi);
 
         // asking for input
-      //   System.out.print("Jump to : ");
-      //   posisi = Input.nextInt();
+        System.out.print("Lompat ke (kiri, kanan, atas, bawah): ");
+        lompat = action.nextLine();
+        System.out.println(player1.lompat(lompat));
 
       //   // check user input 
       //   if ((acak == 10 && posisi == 11) || (acak == 11 && posisi == 10)) {
