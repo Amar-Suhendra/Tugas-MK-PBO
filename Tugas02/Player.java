@@ -2,13 +2,12 @@
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-07
+ * @version 24.10.21.Alpha-08
  */
 public class Player {
   // instance variables - replace the example below with your own
   private String nama;
   private int nilai;
-
 
   /**
    * Constructor for objects of class Player
@@ -53,7 +52,19 @@ public class Player {
   }
 
   public int lompat(String jump) {
-    int jarak = 10;
+    int jarak = 0;
+
+    if (jump.equalsIgnoreCase("kanan")) {
+      jarak = 1;
+    } else if (jump.equalsIgnoreCase("kiri")) {
+      jarak = -1;
+    } else if (jump.equalsIgnoreCase("atas")) {
+      jarak = -10;
+    } else if (jump.equalsIgnoreCase("bawah")) {
+      jarak = 10;
+    } else {
+      jarak = 0;
+    }
 
     return jarak;
   }
