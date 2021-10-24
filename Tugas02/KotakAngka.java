@@ -2,7 +2,7 @@
  * Using to print the Map for the game
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-08
+ * @version 24.10.21.Alpha-09
  */
 public class KotakAngka {
   // instance variables - replace the example below with your own

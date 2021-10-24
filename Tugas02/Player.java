@@ -2,23 +2,19 @@
  * Write a description of class Player here.
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-08
+ * @version 24.10.21.Alpha-09
  */
 public class Player {
   // instance variables - replace the example below with your own
   private String nama;
   private int nilai;
+  private int jarak;
 
   /**
    * Constructor for objects of class Player
    */
   public Player() {
-
-  }
-
-  public Player(String nama) {
-    // initialise instance variables
-    this.nama = nama;
+    jarak = 0;
   }
 
   /**
@@ -41,10 +37,8 @@ public class Player {
     return nilai;
   }
 
-  public int setNilai(int nilaibaru) {
+  public void setNilai(int nilaibaru) {
     nilai = nilaibaru;
-
-    return nilai;
   }
 
   public String buatSquirrel(String bajing) {
@@ -52,7 +46,6 @@ public class Player {
   }
 
   public int lompat(String jump) {
-    int jarak = 0;
 
     if (jump.equalsIgnoreCase("kanan")) {
       jarak = 1;

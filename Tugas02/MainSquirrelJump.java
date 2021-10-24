@@ -3,7 +3,7 @@
  * main class
  *
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-08
+ * @version 24.10.21.Alpha-09
  */
 
 import java.util.Scanner;
@@ -24,18 +24,19 @@ public class MainSquirrelJump {
     play = x;
     nama = user;
     tupai = squirrel;
+
     while (play) {
 
       KotakAngka map1 = new KotakAngka();
       Player player1 = new Player();
       posisi = map1.tambahSquirrel();
-      ;
+      
       player1.SetNama(nama);
       map1.InsertMap();
       map1.PrintMap();
       System.out.println("Player : " + player1.getNama());
       System.out.println("Tupai  : " + player1.buatSquirrel(tupai));
-      System.out.println("Posisi tupai pada : " + posisi);
+      //System.out.println("Posisi tupai pada : " + posisi);
 
       // check where the squirrel is
       if (posisi > 1 && posisi < 50) {
@@ -52,7 +53,7 @@ public class MainSquirrelJump {
       // loop for how many squirrels can jump
       for (int i = 1; i <= ulang; i++) {
 
-        System.out.println("\n");
+        //System.out.println("\n");
         System.out.println("Tupai telah melompat sebanyak : " + (i - 1));
         System.out.println("Squirrel is at number : " + posisi);
 
@@ -84,8 +85,6 @@ public class MainSquirrelJump {
           posisi = posisi + jarak;
           if (posisi == 100) {
             i = ulang;
-          } else {
-            System.out.println("You can only jump to adjacent place. Try again." + "\n");
           }
         }
       }
@@ -98,7 +97,7 @@ public class MainSquirrelJump {
 
       play = false;
     }
-
+    action.close();
   }
 
   public static void mainMenu() {
@@ -118,7 +117,7 @@ public class MainSquirrelJump {
     Scanner input = new Scanner(System.in);
     Scanner user = new Scanner(System.in);
 
-    // while (chooise) {
+    while (chooise) {
     mainMenu();
     pilih = input.nextInt();
 
@@ -136,9 +135,9 @@ public class MainSquirrelJump {
       System.out.println("Inputan mu tidak valid");
     }
 
-    // }
+     }
 
-    // input.close();
-    // user.close();
+    input.close();
+    user.close();
   }
 }
