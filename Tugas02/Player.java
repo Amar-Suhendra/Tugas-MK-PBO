@@ -1,52 +1,78 @@
 /**
- * Write a description of class Player here.
- *
+ * This class is used for configure the player, player controller, and add
+ * squirrel.
+ * 
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-09
+ * @version 25.10.21.Beta-01
  */
+
 public class Player {
-  // instance variables - replace the example below with your own
+  // instance variables
   private String nama;
-  private int nilai;
-  private int jarak;
+  private int nilai, jarak;
 
   /**
    * Constructor for objects of class Player
    */
   public Player() {
+    nama = "player";
     jarak = 0;
+    nilai = 0;
   }
 
   /**
-   * An example of a method - replace this comment with your own
-   *
-   * @param y a sample parameter for a method
-   * @return the sum of x and y
+   * Set the Player name
+   * 
+   * @param nama parameter for setNama
    */
-  public String getNama() {
-    // put your code here
-    return nama;
-  }
-
-  public void SetNama(String nama) {
-    // put your code here
+  public void setNama(String nama) {
     this.nama = nama;
   }
 
-  public int getNilai() {
-    return nilai;
+  /**
+   * Get the Player name
+   * 
+   * @return the value of nama variable
+   */
+  public String getNama() {
+    return nama;
   }
 
+  /**
+   * Set the value
+   * 
+   * @param nilaibaru parameter for setNilai
+   */
   public void setNilai(int nilaibaru) {
     nilai = nilaibaru;
   }
 
-  public String buatSquirrel(String bajing) {
-    return bajing;
+  /**
+   * Get the value
+   * 
+   * @return the value of nilai variable
+   */
+  public int getNilai() {
+    return nilai;
   }
 
-  public int lompat(String jump) {
+  /**
+   * Make a tupai
+   * 
+   * @param tupai parameter for buatSquirrel
+   * @return the value of tupai variable
+   */
+  public String buatSquirrel(String tupai) {
+    return tupai;
+  }
 
+  /**
+   * This is used to find out which direction the player is moving
+   * 
+   * @param jump parameter for lompat
+   * @return the value of jarak variable
+   */
+  public int lompat(String jump) {
     if (jump.equalsIgnoreCase("kanan")) {
       jarak = 1;
     } else if (jump.equalsIgnoreCase("kiri")) {
@@ -58,7 +84,7 @@ public class Player {
     } else {
       jarak = 0;
     }
-
     return jarak;
   }
+
 }

@@ -1,46 +1,47 @@
 /**
- * Using to print the Map for the game
- *
+ * This class is used for print "kotak" for the game and give random value.
+ * 
  * @author Amar Suhendra
- * @version 24.10.21.Alpha-09
+ * @version 25.10.21.Beta-01
  */
+
 public class KotakAngka {
-  // instance variables - replace the example below with your own
-  private int[][] map;
-  private int angka;
+  // instance variables
+  private int jumlahKotak, min, max, posisi;
+  private int[][] kotak;
 
   /**
-   * Constructor for objects of class Map
+   * Constructor for objects of class KotakAngka
    */
   public KotakAngka() {
     // initialise instance variables
-    map = new int[10][10];
-    angka = 1;
+    kotak = new int[10][10];
+    jumlahKotak = 1;
+    min = 1;
+    max = 99;
+    posisi = 0;
   }
 
   /**
-   * An example of a method - replace this comment with your own
-   *
-   * @param y a sample parameter for a method
-   * @return the sum of x and y
+   * This method will insert a value to the array variable
    */
-
-  public void InsertMap() {
-    // insert number into array
-    for (int i = 0; i < map.length; i++) {
-      for (int j = 0; j < map.length; j++) {
-        map[i][j] = angka;
-        angka++;
+  public void insertMap() {
+    for (int i = 0; i < kotak.length; i++) {
+      for (int j = 0; j < kotak.length; j++) {
+        kotak[i][j] = jumlahKotak;
+        jumlahKotak++;
       }
     }
   }
 
-  public void PrintMap() {
-    // this code gonna print the array as a table
+  /**
+   * This method will print the array
+   */
+  public void printMap() {
     System.out.println("=====================================================");
-    for (int i = 0; i < map.length; i++) {
-      for (int j = 0; j < map.length; j++) {
-        System.out.printf("%5d", map[i][j]);
+    for (int i = 0; i < kotak.length; i++) {
+      for (int j = 0; j < kotak.length; j++) {
+        System.out.printf("%5d", kotak[i][j]);
         if (j == 9) {
           System.out.print("\n");
         }
@@ -49,8 +50,12 @@ public class KotakAngka {
     System.out.println("=====================================================");
   }
 
+  /**
+   * This method will give a random number
+   * 
+   * @return random number from 1 to 99
+   */
   public int tambahSquirrel() {
-    int posisi, min = 1, max = 99;
     posisi = (int) (min + Math.random() * (max - min));
     return posisi;
   }
