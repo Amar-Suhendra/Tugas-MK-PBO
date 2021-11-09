@@ -2,32 +2,27 @@
 /**
  * Write a description of class Junior here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Amar Suhendra
+ * @version 10.11.21-Aplha01
  */
-public class Junior
+public class Junior extends Tabungan
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
+    private double SALDO_AWAL_MINIMUM = 50000;
+    private double SALDO_MINUMUM = 10000;
+    private double SETORAN_MINIMUM = 50000;
+    private double MAKS_TARIKAN_PER_HARI = 1000000;
 
     /**
      * Constructor for objects of class Junior
      */
-    public Junior()
+    public Junior(String nama, long noRek, double saldoAwal) 
     {
         // initialise instance variables
-        x = 0;
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void tarikUang(double jumlahPenarikan){
+
     }
 }

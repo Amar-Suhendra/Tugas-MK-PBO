@@ -1,33 +1,15 @@
-
 /**
- * Write a description of class Simpanan here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * 
+ * @author Amar Suhendra
+ * @version 10.11.21-Aplha01
  */
-public class Simpanan
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Simpanan extends Tabungan {
+    private double SALDO_AWAL_MINIMUM = 500000;
+    private double SALDO_MINUMUM = 10000;
+    private double SETORAN_MINIMUM = 50000;
 
-    /**
-     * Constructor for objects of class Simpanan
-     */
-    public Simpanan()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public double Simpan(String nama, long noRek, double saldoAwal){
+        double hasil = 1;
+        return hasil;
     }
 }

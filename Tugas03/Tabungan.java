@@ -1,33 +1,49 @@
-
 /**
- * Write a description of class Tabungan here.
+ * Ini adalah class utama (parent) dari class simpanan dan junior
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Amar Suhendra
+ * @version 10.11.21-Aplha01
  */
 public class Tabungan
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Instance variables
+    private String nama;
+    private long noRekening;
+    private double saldo = 0;
+    private double saldo_minimun = 0;
+    private double setoran_minimun = 0;
 
-    /**
-     * Constructor for objects of class Tabungan
-     */
-    public Tabungan()
-    {
-        // initialise instance variables
-        x = 0;
+    public Tabungan(){
+        
+    }
+    
+    public Tabungan(String nama, long noRekening){
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    protected void setSaldoMinimum(double saldo_minimun){
+
     }
+
+    protected void setSetoranMininum(double setoran_minumum){
+
+    }
+
+    public double getSaldo(){
+        double saldo= 1.0;
+        return saldo;
+    }
+
+    public void setSaldo(double saldo){
+
+    }
+
+    public void simpanUang(double uang){
+
+    }
+
+    public void tarikUang(double jumlahPenarikan){
+
+    }
+
 }

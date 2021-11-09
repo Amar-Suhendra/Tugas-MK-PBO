@@ -1,10 +1,20 @@
 #BlueJ class context
 comment0.target=Tabungan
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tabungan\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Ini\ adalah\ class\ utama\ (parent)\ dari\ class\ simpanan\ dan\ junior\r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 10.11.21-Aplha01\r\n
 comment1.params=
 comment1.target=Tabungan()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tabungan\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment2.params=nama\ noRekening
+comment2.target=Tabungan(java.lang.String,\ long)
+comment3.params=saldo_minimun
+comment3.target=void\ setSaldoMinimum(double)
+comment4.params=setoran_minumum
+comment4.target=void\ setSetoranMininum(double)
+comment5.params=
+comment5.target=double\ getSaldo()
+comment6.params=saldo
+comment6.target=void\ setSaldo(double)
+comment7.params=uang
+comment7.target=void\ simpanUang(double)
+comment8.params=jumlahPenarikan
+comment8.target=void\ tarikUang(double)
+numComments=9
