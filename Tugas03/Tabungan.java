@@ -2,7 +2,7 @@
  * Ini adalah class utama (parent) dari class simpanan dan junior
  *
  * @author Amar Suhendra
- * @version 15.11.21-Aplha02
+ * @version 15.11.21-Aplha03
  */
 abstract class Tabungan
 {
@@ -40,9 +40,9 @@ abstract class Tabungan
 
     public void simpanUang(double uang){
         if (uang < setoran_minimun) {
-            saldo+=uang;
+            System.out.println("Setoran minimum : " + setoran_minimun);
         } else {
-            //boleh simpan
+            saldo+=uang;
         }
     }
 

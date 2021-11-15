@@ -3,7 +3,7 @@
  * Class ini akan mengecek semua class yang telah dibuat
  *
  * @author Amar Suhendra
- * @version 15.11.21-Alpha02
+ * @version 15.11.21-Alpha03
  */
 
 import java.util.Scanner;
@@ -32,12 +32,13 @@ public class TestTabungan {
     System.out.println("|            2. Tarik tunai         |");
     System.out.println("+===================================+");
   }
+
   public static void main(String[] args) {
-    String nama;
+    String nama, aksi;
     long noRekening;
     int pilih;
     boolean status = true;
-    double saldo, setoran;
+    double saldoAwal, setoran;
     try (Scanner input = new Scanner(System.in)) {
       System.out.print("Masukkan nama anda : ");
       nama = input.nextLine();
@@ -50,21 +51,40 @@ public class TestTabungan {
         System.out.print("Masukkan pilihan anda (1/2) : ");
         pilih = input.nextInt();
         if (pilih == 1) {
-          Simpanan akunSimpanan = new Simpanan();
           while (status) {
-            menusimpanan();
-            System.out.print("Masukkan pilihan anda (1/2) : ");
-            pilih = input.nextInt();
-            if (pilih == 1) {
-              System.out.println("simpan uang");
-              setoran = input.nextDouble();
-              
-              status = false;
-            } else if (pilih == 2) {
-              System.out.println("tarik duit");
-              status = false;
+            System.out.print("Masukkan saldo awal anda : ");
+            saldoAwal = input.nextDouble();
+            Simpanan akunSimpanan = new Simpanan(nama, noRekening, saldoAwal);
+            if (akunSimpanan.getSaldo() < 499999) {
+              System.out.println("Minimal saldo awal adalah : 50.000");
             } else {
-              System.out.println("menu gk valid");
+              while (status) {
+                menusimpanan();
+                System.out.print("Masukkan pilihan anda (1/2) : ");
+                pilih = input.nextInt();
+                if (pilih == 1) {
+                  System.out.print("Masukkan jumlah uang yang ingin disimpan : ");
+                  setoran = input.nextDouble();
+                  akunSimpanan.simpanUang(setoran);
+                  System.out.println("Saldo anda sekarang : " + akunSimpanan.getSaldo());
+                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar ");
+                  aksi = input.next();
+
+                  if (aksi.equalsIgnoreCase("m")) {
+                    status = true;
+                  } else if (aksi.equalsIgnoreCase("e")) {
+                    status = false;
+                  } else {
+                    status = false;
+                  }
+
+                } else if (pilih == 2) {
+                  System.out.println("tarik duit");
+                  status = false;
+                } else {
+                  System.out.println("menu gk valid");
+                }
+              }
             }
           }
           status = false;
