@@ -2,9 +2,9 @@
  * Ini adalah class utama (parent) dari class simpanan dan junior
  *
  * @author Amar Suhendra
- * @version 10.11.21-Aplha01
+ * @version 15.11.21-Aplha02
  */
-public class Tabungan
+abstract class Tabungan
 {
     // Instance variables
     private String nama;
@@ -18,32 +18,40 @@ public class Tabungan
     }
     
     public Tabungan(String nama, long noRekening){
-
+        this.nama = nama;
+        this.noRekening = noRekening;
     }
 
     protected void setSaldoMinimum(double saldo_minimun){
-
+        this.saldo_minimun = saldo_minimun;
     }
 
     protected void setSetoranMininum(double setoran_minumum){
-
+        this.setoran_minimun = setoran_minumum;
     }
 
     public double getSaldo(){
-        double saldo= 1.0;
         return saldo;
     }
 
     public void setSaldo(double saldo){
-
+        this.saldo = saldo;
     }
 
     public void simpanUang(double uang){
-
+        if (uang < setoran_minimun) {
+            saldo+=uang;
+        } else {
+            //boleh simpan
+        }
     }
 
     public void tarikUang(double jumlahPenarikan){
-
+        if ((saldo - jumlahPenarikan) < 0 ) {
+            //gk boleh narik
+        } else {
+            
+        }
     }
 
 }

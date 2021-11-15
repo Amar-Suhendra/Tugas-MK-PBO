@@ -3,7 +3,7 @@
  * Write a description of class Junior here.
  *
  * @author Amar Suhendra
- * @version 10.11.21-Aplha01
+ * @version 15.11.21-Alpha02
  */
 public class Junior extends Tabungan
 {
