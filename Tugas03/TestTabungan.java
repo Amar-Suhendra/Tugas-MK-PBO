@@ -3,7 +3,7 @@
  * Class ini akan mengecek semua class yang telah dibuat
  *
  * @author Amar Suhendra
- * @version 15.11.21-Alpha03
+ * @version 15.11.21-Alpha04
  */
 
 import java.util.Scanner;
@@ -38,7 +38,7 @@ public class TestTabungan {
     long noRekening;
     int pilih;
     boolean status = true;
-    double saldoAwal, setoran;
+    double saldoAwal, setoran, tarik;
     try (Scanner input = new Scanner(System.in)) {
       System.out.print("Masukkan nama anda : ");
       nama = input.nextLine();
@@ -60,14 +60,17 @@ public class TestTabungan {
             } else {
               while (status) {
                 menusimpanan();
+                System.out.println("Nama : " + nama);
+                System.out.println("No Rekening : " + noRekening + "\n");
                 System.out.print("Masukkan pilihan anda (1/2) : ");
                 pilih = input.nextInt();
+
                 if (pilih == 1) {
                   System.out.print("Masukkan jumlah uang yang ingin disimpan : ");
                   setoran = input.nextDouble();
                   akunSimpanan.simpanUang(setoran);
                   System.out.println("Saldo anda sekarang : " + akunSimpanan.getSaldo());
-                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar ");
+                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
                   aksi = input.next();
 
                   if (aksi.equalsIgnoreCase("m")) {
@@ -79,10 +82,23 @@ public class TestTabungan {
                   }
 
                 } else if (pilih == 2) {
-                  System.out.println("tarik duit");
-                  status = false;
+
+                  System.out.print("Masukkan jumlah uang yang ingin ditarik : ");
+                  tarik = input.nextDouble();
+                  akunSimpanan.tarikUang(tarik);
+                  System.out.println("Sisa saldo anda : " + akunSimpanan.getSaldo());
+                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
+                  aksi = input.next();
+
+                  if (aksi.equalsIgnoreCase("m")) {
+                    status = true;
+                  } else if (aksi.equalsIgnoreCase("e")) {
+                    status = false;
+                  } else {
+                    status = false;
+                  }
                 } else {
-                  System.out.println("menu gk valid");
+                  System.out.println("menu tidak valid");
                 }
               }
             }

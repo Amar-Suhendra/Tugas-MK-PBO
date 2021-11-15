@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Junior
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Junior\ here.\r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Alpha02\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Junior\ here.\r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Alpha03\r\n
 comment1.params=nama\ noRek\ saldoAwal
 comment1.target=Junior(java.lang.String,\ long,\ double)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Junior\r\n

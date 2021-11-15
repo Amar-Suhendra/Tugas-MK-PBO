@@ -2,7 +2,7 @@
  * Ini adalah class utama (parent) dari class simpanan dan junior
  *
  * @author Amar Suhendra
- * @version 15.11.21-Aplha03
+ * @version 15.11.21-Aplha04
  */
 abstract class Tabungan
 {
@@ -48,9 +48,13 @@ abstract class Tabungan
 
     public void tarikUang(double jumlahPenarikan){
         if ((saldo - jumlahPenarikan) < 0 ) {
-            //gk boleh narik
+            System.out.println("Saldo anda tidak cukup!");
         } else {
-            
+            if ((saldo - jumlahPenarikan) < saldo_minimun) {
+                System.out.println("Saldo anda tidak cukup!");
+            } else {
+                saldo -= jumlahPenarikan;
+            }
         }
     }
 

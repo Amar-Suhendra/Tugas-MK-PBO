@@ -1,8 +1,6 @@
 #BlueJ class context
 comment0.target=Simpanan
-comment0.text=\r\n\ \r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Alpha02\r\n
-comment1.params=
-comment1.target=Simpanan()
-comment2.params=nama\ noRek\ saldoAwal
-comment2.target=Simpanan(java.lang.String,\ long,\ double)
-numComments=3
+comment0.text=\r\n\ \r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Alpha03\r\n
+comment1.params=nama\ noRek\ saldoAwal
+comment1.target=Simpanan(java.lang.String,\ long,\ double)
+numComments=2

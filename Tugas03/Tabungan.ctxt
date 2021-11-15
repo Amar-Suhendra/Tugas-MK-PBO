@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Tabungan
-comment0.text=\r\n\ Ini\ adalah\ class\ utama\ (parent)\ dari\ class\ simpanan\ dan\ junior\r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Aplha02\r\n
+comment0.text=\r\n\ Ini\ adalah\ class\ utama\ (parent)\ dari\ class\ simpanan\ dan\ junior\r\n\r\n\ @author\ Amar\ Suhendra\r\n\ @version\ 15.11.21-Aplha03\r\n
 comment1.params=
 comment1.target=Tabungan()
 comment2.params=nama\ noRekening

@@ -1,7 +1,7 @@
 /**
  * 
  * @author Amar Suhendra
- * @version 15.11.21-Alpha03
+ * @version 15.11.21-Alpha04
  */
 public class Simpanan extends Tabungan {
     private double SALDO_AWAL_MINIMUM = 500000;
