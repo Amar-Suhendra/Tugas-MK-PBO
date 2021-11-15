@@ -1,14 +1,17 @@
-
 /**
  * Class ini akan mengecek semua class yang telah dibuat
  *
  * @author Amar Suhendra
  * @version 15.11.21-Alpha04
+ * Link Gdrive : https://drive.google.com/drive/folders/1o8RGKEoW2MLsK9gaiGTvM9ERefwr66GT?usp=sharing
  */
 
 import java.util.Scanner;
 
 public class TestTabungan {
+  /**
+   * Method untuk menu utama
+   */
   private static void menuMain() {
     System.out.println("+===================================+");
     System.out.println("|           APLIKASI TABUNGAN       |");
@@ -17,6 +20,9 @@ public class TestTabungan {
     System.out.println("+===================================+");
   }
 
+  /**
+   * Method untuk menu simpanan
+   */
   private static void menusimpanan() {
     System.out.println("+===================================+");
     System.out.println("|            Menu simpanan          |");
@@ -25,6 +31,9 @@ public class TestTabungan {
     System.out.println("+===================================+");
   }
 
+  /**
+   * Method untuk menu junior
+   */
   private static void menujunior() {
     System.out.println("+===================================+");
     System.out.println("|            Menu junior            |");
@@ -34,30 +43,49 @@ public class TestTabungan {
   }
 
   public static void main(String[] args) {
+    // deklarasi variabel
     String nama, aksi;
     long noRekening;
     int pilih;
     boolean status = true;
     double saldoAwal, setoran, tarik;
+
     try (Scanner input = new Scanner(System.in)) {
+      // meminta inputan user
       System.out.print("Masukkan nama anda : ");
       nama = input.nextLine();
       System.out.print("Masukkan no rekening anda : ");
       noRekening = input.nextLong();
+
+      // start loop
       while (status) {
         menuMain();
         System.out.println("Nama : " + nama);
         System.out.println("No Rekening : " + noRekening + "\n");
+
+        // meminta inputan user
         System.out.print("Masukkan pilihan anda (1/2) : ");
         pilih = input.nextInt();
+
+        // melakukan validasi
         if (pilih == 1) {
+
+          // start loop
           while (status) {
+
+            // meminta inputan user
             System.out.print("Masukkan saldo awal anda : ");
             saldoAwal = input.nextDouble();
+
+            // membuat objek baru
             Simpanan akunSimpanan = new Simpanan(nama, noRekening, saldoAwal);
+
+            // melakukan validasi
             if (akunSimpanan.getSaldo() < 499999) {
-              System.out.println("Minimal saldo awal adalah : 50.000");
+              System.out.println("Minimal saldo awal adalah : 500.000");
             } else {
+
+              // loop start
               while (status) {
                 menusimpanan();
                 System.out.println("Nama : " + nama);
@@ -65,6 +93,7 @@ public class TestTabungan {
                 System.out.print("Masukkan pilihan anda (1/2) : ");
                 pilih = input.nextInt();
 
+                // melakukan validasi
                 if (pilih == 1) {
                   System.out.print("Masukkan jumlah uang yang ingin disimpan : ");
                   setoran = input.nextDouble();
@@ -73,6 +102,7 @@ public class TestTabungan {
                   System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
                   aksi = input.next();
 
+                  // melakukan validasi
                   if (aksi.equalsIgnoreCase("m")) {
                     status = true;
                   } else if (aksi.equalsIgnoreCase("e")) {
@@ -83,6 +113,7 @@ public class TestTabungan {
 
                 } else if (pilih == 2) {
 
+                  // meminta inputan user
                   System.out.print("Masukkan jumlah uang yang ingin ditarik : ");
                   tarik = input.nextDouble();
                   akunSimpanan.tarikUang(tarik);
@@ -90,6 +121,7 @@ public class TestTabungan {
                   System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
                   aksi = input.next();
 
+                  // melakukan validasi
                   if (aksi.equalsIgnoreCase("m")) {
                     status = true;
                   } else if (aksi.equalsIgnoreCase("e")) {
@@ -98,31 +130,94 @@ public class TestTabungan {
                     status = false;
                   }
                 } else {
-                  System.out.println("menu tidak valid");
+                  System.out.println("Pilihan tidak valid");
                 }
+                // end loop
               }
             }
+            // end loop
           }
           status = false;
+
         } else if (pilih == 2) {
+
+          // loop start
           while (status) {
-            menujunior();
-            System.out.print("Masukkan pilihan anda (1/2) : ");
-            pilih = input.nextInt();
-            if (pilih == 1) {
-              System.out.println("simpan uang");
-              status = false;
-            } else if (pilih == 2) {
-              System.out.println("tarik duit");
-              status = false;
+
+            // meminta saldo awal
+            System.out.print("Masukkan saldo awal anda : ");
+            saldoAwal = input.nextDouble();
+
+            // membuat object baru
+            Junior akunJunior = new Junior(nama, noRekening, saldoAwal);
+
+            // melakukan validasi
+            if (akunJunior.getSaldo() < 49999) {
+              System.out.println("Minimal saldo awal adalah : 50.000");
             } else {
-              System.out.println("menu gk valid");
+
+              // loop start
+              while (status) {
+                menujunior();
+                System.out.println("Nama : " + nama);
+                System.out.println("No Rekening : " + noRekening + "\n");
+
+                // meminta inputan user
+                System.out.print("Masukkan pilihan anda (1/2) : ");
+                pilih = input.nextInt();
+
+                // melakukan validasi
+                if (pilih == 1) {
+
+                  // meminta inputan user
+                  System.out.print("Masukkan jumlah uang yang ingin disimpan : ");
+                  setoran = input.nextDouble();
+                  akunJunior.simpanUang(setoran);
+                  System.out.println("Saldo anda sekarang : " + akunJunior.getSaldo());
+                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
+                  aksi = input.next();
+
+                  // melakukan validasi
+                  if (aksi.equalsIgnoreCase("m")) {
+                    status = true;
+                  } else if (aksi.equalsIgnoreCase("e")) {
+                    status = false;
+                  } else {
+                    status = false;
+                  }
+
+                } else if (pilih == 2) {
+
+                  // meminta inputan user
+                  System.out.print("Masukkan jumlah uang yang ingin ditarik : ");
+                  tarik = input.nextDouble();
+                  akunJunior.tarikUang(tarik);
+                  System.out.println("Sisa saldo anda : " + akunJunior.getSaldo());
+                  System.out.print("\n" + "Tekan 'm' untuk kembali ke menu, tekan 'e' untuk keluar : ");
+                  aksi = input.next();
+
+                  // melakukan validasi
+                  if (aksi.equalsIgnoreCase("m")) {
+                    status = true;
+                  } else if (aksi.equalsIgnoreCase("e")) {
+                    status = false;
+                  } else {
+                    status = false;
+                  }
+                } else {
+                  System.out.println("Pilihan tidak valid");
+                }
+                // end loop
+              }
             }
+            // end loop
           }
+          status = false;
         } else {
-          System.out.println("gk ada pilihan");
+          System.out.println("Pilihan tidak valid");
         }
-      } // end loop
+        // end loop
+      }
     } catch (Exception e) {
       System.out.println("system close");
     }

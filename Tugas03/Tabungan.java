@@ -2,9 +2,10 @@
  * Ini adalah class utama (parent) dari class simpanan dan junior
  *
  * @author Amar Suhendra
- * @version 15.11.21-Aplha04
+ * @version 15.11.21-Alpha05
+ * Link Gdrive : https://drive.google.com/drive/folders/1o8RGKEoW2MLsK9gaiGTvM9ERefwr66GT?usp=sharing
  */
-abstract class Tabungan
+abstract class Tabungan 
 {
     // Instance variables
     private String nama;
@@ -13,41 +14,83 @@ abstract class Tabungan
     private double saldo_minimun = 0;
     private double setoran_minimun = 0;
 
-    public Tabungan(){
-        
+    /**
+     * Constructor for class Tabungan
+     */
+    public Tabungan() 
+    {
+
     }
-    
-    public Tabungan(String nama, long noRekening){
+
+    // Second Constructor for class Tabungan
+    public Tabungan(String nama, long noRekening) 
+    {
         this.nama = nama;
         this.noRekening = noRekening;
     }
 
-    protected void setSaldoMinimum(double saldo_minimun){
+    /**
+     * Method mutator untuk mengeset saldo minimum
+     * 
+     * @param saldo_minimun Menerima data saldo minimum dari user
+     */
+    protected void setSaldoMinimum(double saldo_minimun) 
+    {
         this.saldo_minimun = saldo_minimun;
     }
 
-    protected void setSetoranMininum(double setoran_minumum){
-        this.setoran_minimun = setoran_minumum;
+    /**
+     * Method mutator untuk mengeset setoran minimun
+     * 
+     * @param setoran_minumum Menerima data setoran minimum dari user
+     */
+    protected void setSetoranMininum(double setoran_minimum) 
+    {
+        this.setoran_minimun = setoran_minimum;
     }
 
-    public double getSaldo(){
+    /**
+     * Method accessor untuk mendapatkan nilai saldo
+     * 
+     * @return saldo
+     */
+    public double getSaldo() 
+    {
         return saldo;
     }
 
-    public void setSaldo(double saldo){
+    /**
+     * Method mutator untuk mengeset saldo
+     * 
+     * @param saldo Menerima data saldo dari user
+     */
+    public void setSaldo(double saldo) 
+    {
         this.saldo = saldo;
     }
 
-    public void simpanUang(double uang){
+    /**
+     * Melakukan validasi untuk proses simpan uang
+     * 
+     * @param uang Menerima data uang dari user
+     */
+    public void simpanUang(double uang) 
+    {
         if (uang < setoran_minimun) {
             System.out.println("Setoran minimum : " + setoran_minimun);
         } else {
-            saldo+=uang;
+            saldo += uang;
         }
     }
 
-    public void tarikUang(double jumlahPenarikan){
-        if ((saldo - jumlahPenarikan) < 0 ) {
+    /**
+     * Melakukan validasi untuk proses penarikan uang
+     * 
+     * @param jumlahPenarikan Menerima data jumlah penarikan dari user
+     */
+    public void tarikUang(double jumlahPenarikan) 
+    {
+        if ((saldo - jumlahPenarikan) < 0) {
             System.out.println("Saldo anda tidak cukup!");
         } else {
             if ((saldo - jumlahPenarikan) < saldo_minimun) {
