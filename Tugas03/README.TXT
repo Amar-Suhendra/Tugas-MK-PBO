@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
-Ini adalah project Aplikasi tabugan sederhana berdasarkan Tugas03 
+Ini adalah project Aplikasi tabungan sederhana berdasarkan Tugas03 
 matakuliah PBO
 ------------------------------------------------------------------------
 
